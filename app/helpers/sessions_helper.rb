@@ -18,6 +18,11 @@ end
   def logged_in?
     !current_user.nil?
   end
+
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
+    end 
 # session is a special kind of hash that Rails provides. 
 # It is used to store data that persists between requests. 
 # The data in the session is stored in the user's browser, so it can be used to maintain state during the user's interaction with the application.
