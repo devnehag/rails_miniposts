@@ -26,6 +26,8 @@ module SessionsHelper
     !current_user.nil?
   end
 
+
+    
   # Forgets a persistent session.
   def forget(user)
     user.forget
@@ -38,6 +40,11 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
     end 
+  # Returns true if the given user is the current user.
+  def current_user?(user)
+    user && user == current_user
+  end
+  
 end
 # session is a special kind of hash that Rails provides. 
 # It is used to store data that persists between requests. 
