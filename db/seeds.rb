@@ -8,17 +8,23 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 # Create a main sample user.
-User.create!(name: "Seeded User",
-email: "seed@miniposts.com",
+# Create a main sample user.
+User.create!(name: "Neha Gupta",
+email: "nehag@miniposts.com",
 password: "password",
-password_confirmation: "password")
+password_confirmation: "password",
+admin: true,
+activated: true,
+activated_at: Time.zone.now)
 # Generate a bunch of additional users.
-44.times do |n|
+40.times do |n|
 name = Faker::Name.name
-email = "seed-#{n+1}@miniposts.com"
+email = "neha-#{n+1}@miniposts.com"
 password = "password"
 User.create!(name: name,
 email: email,
 password: password,
-password_confirmation: password)
+password_confirmation: password,
+activated: true,
+activated_at: Time.zone.now)
 end
