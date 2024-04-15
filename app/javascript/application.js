@@ -1,20 +1,5 @@
-//for old rails version
-// require("@rails/ujs").start()
-// require("turbolinks").start()
-//require("@rails/activestorage").start()
-// require("channels")
-// require("jquery")
-// require("bootstrap")
-
-//for new rails version
-// import Rails from '@rails/ujs';
-// import Turbolinks from 'turbolinks';
-// import ActiveStorage from '@rails/activestorage';
-// import "jquery";
-// import "bootstrap";
-
-// Rails.start()
-// Turbolinks.start()
-// ActiveStorage.start()
-
-//import "./add_jquery";
+// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+import "jquery"
+import "jquery_ujs"
+//import "popper"
+import "bootstrap"

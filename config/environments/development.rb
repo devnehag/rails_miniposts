@@ -38,9 +38,13 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-
+  host = 'localhost:3000'
+  #host = '<hex string>.vfs.cloud9.us-east-2.amazonaws.com' # Cloud IDE
   config.action_mailer.perform_caching = false
-
+  # Use this on the cloud IDE.
+  #config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  # Use this id developing on localhost.
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
